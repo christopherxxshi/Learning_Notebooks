@@ -17,7 +17,7 @@
 ## 分类和权重
 
 ### 分类
-    
+
 - 元素选择器 `a{}`
 - 伪元素选择器 `::before{}`
 - 类选择器 `.link{}`
@@ -34,7 +34,7 @@
  2. 类 属性 伪类 +10
  3. 元素 伪元素 +1
  4. 其他选择器 +0
- 
+
  - 权重计算结果不进位
  - `！important`优先级最高
  - 元素属性，优先级高
@@ -45,7 +45,7 @@
 ## 解析方式和性能
 
 - 解析方式：从右往左解析，解析的过程进行验证。
-    
+  
     
 ## 值得关注的选择器
 
@@ -94,14 +94,14 @@
 ### 背景
 
 - 背景颜色
-    
+  
     - background: 少用英文单词
     - rgb16进制表示法： #FF0000 -> 每两位相同可简写为 #F00
     - hsl表示法：hsl(色相0-360，饱和度0-100%，亮度0-100%, optional: 透明度0-1)
     - background:url(路径) 
 
 - 渐变色背景
-    
+  
     - 老写法: `background: -webkit-linear-gradient(开始位置（’left‘），颜色1，颜色2)`
     - 新写法： `background: linear-gradient(to 开始位置（’to left‘），颜色1，颜色2)`
     - `background: linear-gradient(角度(0deg)，颜色1，颜色2)`
@@ -116,18 +116,18 @@
     - 设置背景大小： `background-size: 30px 30px ` 平铺满
 
 - 多背景叠加
-    
+  
     - 交叉网格线
-   
+     
     ```CSS
     background: linear-gradient(135deg, transparent 0, transparent 49.5%, green 49.5%, green 50.5%, transparent 50.5%, transparent 100%,)；
          linear-gradient(45deg, transparent 0, transparent 49.5%, red 49.5%, red 50.5%, transparent 50.5%, transparent 100%,)；
     ```
     
 - 背景图片和属性（雪碧图）
-    
+  
     - 属性：
-        
+      
         - background 背景色的背景图叠加不需要逗号
         - `background: red url(./xxx.png)` 默认平铺
         - `background-repeat: no-repeat` 不平铺 `repeat-x` x方向平铺
@@ -136,14 +136,14 @@
         - `background-size: 100px 50px` resize to 100px*50pz
             - 要缩小图片
             - 在适配移动端的时候： 1个像素对应多个屏幕实际像素，缩小图片来适应
-   
+      
     - 雪碧图
-        
+      
         - 将所有图标放在一张图上，减少HTTP请求次数
         - 通过`background-position: -20px -30px` 和 `width: __px; height:__px` 调整要显示的图标
 
 - base64和性能优化
-    
+  
     - 可以用base64码，替换路径，来显示图片
     - 一般用在小icon上
     - 优点：减少HTTP连接数
@@ -170,7 +170,7 @@
 ### 滚动
 
 - 滚动行为和滚动条
-    
+  
     ![](https://i.imgur.com/M8UssqX.png)
     
 ### 文字折行
